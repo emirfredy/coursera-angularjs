@@ -12,7 +12,7 @@
    <div class="container" ng-controller="LunchCheckController">
      <h1>Lunch Checker</h1>
 
-         <div class="form-group">
+         <div ng-class="['form-group', this['messageStyle']]">
              <input ng-model="menu" id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
@@ -20,8 +20,8 @@
          <div ng-click="checkIfTooMuch()" class="form-group">
              <button class="btn btn-default">Check If Too Much</button>
          </div>
-         <div class="form-group message">
-           {{message}}
+         <div ng-class="['form-group', this['messageStyle'], 'message']">
+           <label class="control-label">{{message}}</label>
          </div>
    </div>
    <script src="angular.min.js"></script>
