@@ -4,8 +4,8 @@
 angular.module('LunchCheckerApp', [])
 .controller('LunchCheckController', LunchCheckController);
 
-LunchCheckController.$inject = ['$scope', '$filter'];
-function LunchCheckController($scope, $filter) {
+LunchCheckController.$inject = ['$scope'];
+function LunchCheckController($scope) {
   $scope.menu = "";
   $scope.message = "";
   $scope.messageStyle = "";
